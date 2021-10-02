@@ -1,13 +1,14 @@
-import requests
 import datetime
 import time
+
+import requests
 
 cronjob = True
 
 
 def get_details():
-    city_name = input("Enter city name")
-    country_code = input("Enter country code")
+    city_name = input("Enter City Name :")
+    country_code = input("Enter Country Code :")
     return {'city': city_name, 'country_code': country_code}
 
 
@@ -48,6 +49,3 @@ def get_data():
     if cronjob:
         time.sleep(5)
         get_data()
-
-
-get_data()
